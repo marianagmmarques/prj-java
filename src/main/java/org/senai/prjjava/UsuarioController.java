@@ -19,8 +19,7 @@ public class UsuarioController {
     @PostMapping("/add")
     public @ResponseBody String addUsuario(
         @RequestParam String nome,
-        @RequestParam String email
-    ){
+        @RequestParam String email){
         Usuario objU = new Usuario();
         objU.setNome(nome);
         objU.setEmail(email);
