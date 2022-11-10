@@ -45,7 +45,7 @@ public class UsuarioController {
         return objU;
     }
 
-    @DeleteMapping("/")
+    @DeleteMapping("/{id}")
     public @ResponseBody String apagar(@PathVariable Integer id){
         uRepository.deleteById(id);
         return "Apagado";
