@@ -4,7 +4,6 @@ import java.util.Optional;
 import org.senai.prjjava.entity.Usuario;
 import org.senai.prjjava.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.domain.QAbstractAuditable;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
