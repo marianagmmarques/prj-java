@@ -5,15 +5,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity // This tells Hibernate to make a table out of this class
+@Entity
 public class Produto {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+
     private String nome;
     private String descricao;
-    private float valor;
-
+    private Float valor;
+    
     public Integer getId() {
         return id;
     }
@@ -32,10 +33,10 @@ public class Produto {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    public float getValor() {
+    public Float getValor() {
         return valor;
     }
-    public void setValor(float valor) {
+    public void setValor(Float valor) {
         this.valor = valor;
     }
 }

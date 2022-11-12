@@ -16,39 +16,42 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-//http://localhost:8080/api/produto
 @Controller
-@RequestMapping(path="/api/produto") 
+@RequestMapping(path = "/api/produto")
 @CrossOrigin("*")
 public class ProdutoController {
     @Autowired
-    private ProdutoRepository pRepository;
-    //Adicinando novos produtos
+    ProdutoRepository pRepository;
+    //http://localhost:8080/api/produto/
     @PostMapping("/")
-    public @ResponseBody Integer addproduto(@RequestBody Produto objP){
+    public @ResponseBody Integer addProduto(@RequestBody Produto objP) {
         pRepository.save(objP);
         return objP.getId();
+      
     }
-    //Buscando todos os produtos
-    @GetMapping ("/")
-    public @ResponseBody Iterable<Produto> buscarProdutos(){
+
+    @GetMapping("/")
+    public @ResponseBody Iterable<Produto> listarProdutos(){
         return pRepository.findAll();
     }
-    //Buscando produto por ID
+
     @GetMapping("/{id}")
     public @ResponseBody Optional<Produto> buscarProduto(@PathVariable Integer id){
         return pRepository.findById(id);
+
     }
-    //Alterando um produto
+
     @PutMapping("/")
     public @ResponseBody Produto atualizar(@RequestBody Produto objP){
         pRepository.save(objP);
         return objP;
+
     }
-    //Deletando um prodduto
+
     @DeleteMapping("/{id}")
     public @ResponseBody String apagar(@PathVariable Integer id){
         pRepository.deleteById(id);
-        return "Produto Apagado da Listagem";
+        return "Produto apagado!";
     }
+    
 }
