@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 //http://localhost:8080/api/produto
 @Controller
-@RequestMapping(path="/api/produto")
+@RequestMapping(path="/api/produto") 
 @CrossOrigin("*")
 public class ProdutoController {
     @Autowired
