@@ -75,4 +75,5 @@ function apagarProduto() {
         limparProduto();
     }
 }
+
 listarProduto();
