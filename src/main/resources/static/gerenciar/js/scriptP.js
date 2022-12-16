@@ -16,7 +16,7 @@ function listarProduto(){
 
         i = 0;
         for(const p of listaProduto){
-            texto += `<tr onclick='editarProduto(${i})'><td>${p.nome}</td><td>${p.descricao}</td><td>R$ ${p.valor.toFixed(2)}</td></tr>`;
+            texto += `<tr onclick='editarProduto(${i})'><td>${p.nome}</td><td>${p.descricao}</td><td>R$ ${p.valor.toFixed(2)}</td><td>${p.imagem}</td></tr>`;
             i++;
         }
 
@@ -34,14 +34,14 @@ function editarProduto(i) {
 }
 
 function gravarProduto() {
-    var produto = {};
-    produto.nome = document.getElementById("nome").value;
-    produto.descricao = document.getElementById("descricao").value;
-    produto.valor = document.getElementById("valor").value;
-    produto.imagem = document.getElementById("imagem").value;
-    produto.id = document.getElementById("id").value;
+    var item = {};
+    item.nome = document.getElementById("nome").value;
+    item.descricao = document.getElementById("descricao").value;
+    item.valor = document.getElementById("valor").value;
+    item.imagem = document.getElementById("imagem").value;
+    item.id = document.getElementById("id").value;
 
-    if (produto.id > 0) {
+    if (item.id > 0) {
         acao = "PUT";
     } else {
         acao = "POST";
@@ -49,7 +49,7 @@ function gravarProduto() {
 
     xhttp.open(acao, api);
     xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    xhttp.send(JSON.stringify(produto));
+    xhttp.send(JSON.stringify(item));
     xhttp.onload = function () {
         // console.log(this.responseText);
         listarProduto();
