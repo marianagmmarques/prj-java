@@ -20,7 +20,7 @@ function addCarrinho(elemento, i) {
 xhttp = new XMLHttpRequest();
 
 function buscarProduto() {
-    xhttp.open("GET", "https://localhost:8080/api/produto/");
+    xhttp.open("GET", "http://localhost:8080/api/produto/");
     xhttp.send();
     xhttp.onload = function () {
         lsProduto = this.responseText;

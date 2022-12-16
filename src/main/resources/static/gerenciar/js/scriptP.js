@@ -2,7 +2,7 @@
 // 01 criar a váriavel
 xhttp = new XMLHttpRequest();
 var listaProduto;
-var api = "https://localhost:8080/api/produto/";
+var api = "http://localhost:8080/api/produto/";
 
 function listarProduto(){
     xhttp.open("GET", api);
