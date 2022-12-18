@@ -16,7 +16,7 @@ function listarProduto(){
 
         i = 0;
         for(const p of listaProduto){
-            texto += `<tr onclick='editarProduto(${i})'><td>${p.nome}</td><td>${p.descricao}</td><td>R$ ${p.valor.toFixed(2)}</td><td>${p.imagem}</td></tr>`;
+            texto += `<tr onclick='editarProduto(${i})'><td>${p.nome}</td><td>R$ ${p.valor.toFixed(2)}</td></tr>`;
             i++;
         }
 
