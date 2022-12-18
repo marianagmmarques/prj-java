@@ -36,7 +36,7 @@ function clonarProdutos(lsProduto) {
         // console.log(produto);
         txProduto += `
         <div class="produto" onclick="addCarrinho(this,${i})">
-        <img src="${produto.img}" alt="">
+        <img src="${produto.imagem}" alt="">
         <p class="nome">${produto.nome}</p>
         <p class="valor">R$ ${produto.valor.toFixed(2)}</p>
         </div>
