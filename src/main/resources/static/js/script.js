@@ -110,7 +110,7 @@ function add(i, it, opc) {
 
 function enviarWhatsApp() {
 
-    fone = "5561985607460";
+    fone = "5561999886936";
     nome = document.getElementById("nome").value;
 
     if (nome == '') {
