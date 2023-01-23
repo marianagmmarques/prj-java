@@ -4,7 +4,7 @@
 }
 
 #banner {
-    background-color: black;
+    background-color: #f4f3f0;
     padding: 30px 300px 30px 300px;
     width: 100%;
     position: fixed;
@@ -12,14 +12,23 @@
 }
 
 #banner img {
-    width: 50px;
-    float: left;
-    margin-right: 30px;
+    width: 250px;
+    float: center;
+    margin-left: 400px;
 }
 
-#banner h1 {
-    color: aqua;
-}
+#banner button {
+    background-color: #ffd6ee; /* Green */
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
 
 #container {
     display: grid;
@@ -28,7 +37,7 @@
 
 .ls-produto {
     width: 700px;
-    margin-top: 106px;
+    margin-top: 350px;
 }
 
 #lsQuantidade {
@@ -38,17 +47,17 @@
 }
 
 .produto {
-    border: solid black 3px;
+    border: solid #f4f3f0 3px;
     width: 200px;
-    height: 210px;
+    height: 290px;
     float: left;
-    margin: 10px;
+    margin: 12px;
     cursor: pointer;
     /* border-color: aqua; */
 }
 
 .produto-selecionado {
-    border-color: aqua;
+    border-color: #ffd6ee;
 }
 
 .produto img {
@@ -57,8 +66,8 @@
 }
 
 .produto .nome {
-    background-color: black;
-    color: aqua;
+    background-color: #ffd6ee;
+    color: #e44c58;
     height: 15%;
     display: flex;
     justify-content: center;
@@ -74,7 +83,7 @@
 
 #bt-fixo,
 #bt-fixo span {
-    background-color: aqua;
+    background-color: #ffd6ee;
     width: 90px;
     height: 90px;
     display: flex;
@@ -92,8 +101,8 @@
     width: 20px;
     height: 20px;
     bottom: 95px;
-    background-color: black;
-    color: aqua;
+    background-color: #ffd6ee;
+    color: black;
 }
 
 @media (max-width: 700px) {
@@ -108,17 +117,18 @@
 
 table {
     width: 100%;
+    margin-top: 250px;
 }
 
 tr {
-    height: 30px;
-    background-color: gray;
+    height: 100px;
+    background-color: #ffd6ee;
     text-align: center;
 
 }
 
 tr span {
-    background-color: black;
+    background-color: #e44c58;
     color: white;
     height: 100%;
     padding: 6%;
@@ -134,14 +144,14 @@ label {
 }
 
 #nome {
-    background-color: gray;
+    background-color: #ffd6ee;
     width: 70%;
     height: 30px;
     border: none;
 }
 
 #bt-enviar {
-    background-color: black;
+    background-color: #e44c58;
     color: white;
     font-size: 20px;
     cursor: pointer;
